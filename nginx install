@@ -1,0 +1,9 @@
+yum -y install gcc pcre-devel openssl-devel
+tar -xf nginx-1.12.3.tar.gz
+cd nginx-1.12.3
+./configure 
+make
+make install
+ln -s /usr/local/nginx/sbin/nginx
+nginx 
+ss -antupl | grep nginx
